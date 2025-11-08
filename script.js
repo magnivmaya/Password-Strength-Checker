@@ -11,7 +11,7 @@ const reqUppercase = document.getElementById('req-uppercase');
 const reqLowercase = document.getElementById('req-lowercase');
 const reqNumber = document.getElementById('req-number');
 const reqSpecial = document.getElementById('req-special');
-
+ 
 // Toggle password visibility
 togglePassword.addEventListener('click', () => {
     const type = passwordInput.type === 'password' ? 'text' : 'password';
