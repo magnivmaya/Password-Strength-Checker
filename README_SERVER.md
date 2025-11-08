@@ -10,7 +10,7 @@ This guide shows you how to run your Password Strength Checker on your local net
 2. **Open your project folder**: `Password-Strength-Checker`
 3. **Open `server.py`** in Visual Studio
 4. **Run the script**:
-   - Press `F5` to run with debugging, OR
+   - Press `F5` to run with debugging, OR 
    - Right-click on `server.py` → "Run Python File in Terminal"
    - Or use the terminal: `python server.py`
 
