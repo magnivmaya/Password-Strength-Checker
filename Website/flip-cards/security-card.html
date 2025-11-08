@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security - Flip Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, rgb(0, 51, 255) 0%, rgb(255, 128, 0) 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flip-cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            perspective: 1000px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            cursor: pointer;
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUpCard 0.8s ease-out forwards;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .flip-card.flipped .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .flip-card-front {
+            backdrop-filter: blur(22px);
+        }
+
+        .flip-card-back {
+            background: linear-gradient(135deg, rgba(0, 51, 255, 0.95) 0%, rgba(255, 128, 0, 0.95) 100%);
+            backdrop-filter: blur(10px);
+            transform: rotateY(180deg);
+            color: white;
+        }
+
+        .flip-card-front img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card-front h3 {
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .flip-card-back h3 {
+            font-size: 1.8rem;
+            color: white;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .flip-card-back p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover effect */
+        .flip-card:hover .flip-card-inner {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .flip-card.flipped:hover .flip-card-inner {
+            transform: rotateY(180deg) scale(1.05);
+        }
+
+        @keyframes fadeInUpCard {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .flip-card {
+                width: 280px;
+                height: 380px;
+            }
+
+            .flip-card-front img {
+                height: 200px;
+            }
+
+            .flip-card-front h3,
+            .flip-card-back h3 {
+                font-size: 1.5rem;
+            }
+
+            .flip-card-back p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flip-cards-container">
+        <div class="flip-card" onclick="window.location.href='security-page.html'">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="../../Pictures/security.jpg" alt="Security">
+                    <h3>Security</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Security Tips</h3>
+                    <p>Protect your digital life with strong passwords. Use unique passwords for each account and enable two-factor authentication whenever possible.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-flip on hover for visual effect
+        document.querySelector('.flip-card').addEventListener('mouseenter', function() {
+            this.classList.add('flipped');
+        });
+        
+        document.querySelector('.flip-card').addEventListener('mouseleave', function() {
+            this.classList.remove('flipped');
+        });
+    </script>
+</body>
+</html>
+

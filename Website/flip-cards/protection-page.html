@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Protected - SafeSniffer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, rgb(0, 51, 255) 0%, rgb(255, 128, 0) 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header img {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .content h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .content ul {
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, rgb(0, 51, 255) 0%, rgb(255, 128, 0) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ Stay Protected</h1>
+            <img src="../../Pictures/hacker.jpg" alt="Protection">
+        </div>
+        <div class="content">
+            <h2>Keep Your Accounts Secure</h2>
+            <p>Protection is an ongoing process. Here's how to maintain strong security practices and keep your digital life safe from threats.</p>
+            
+            <h2>Password Management</h2>
+            <ul>
+                <li><strong>Use a password manager</strong> - Securely store and manage all your passwords in one place</li>
+                <li><strong>Never reuse passwords</strong> - Each account should have its own unique password</li>
+                <li><strong>Regularly update passwords</strong> - Change passwords periodically, especially for sensitive accounts</li>
+                <li><strong>Enable password alerts</strong> - Get notified if your password appears in a data breach</li>
+            </ul>
+
+            <h2>Additional Security Measures</h2>
+            <ul>
+                <li>Enable two-factor authentication (2FA) on all important accounts</li>
+                <li>Keep your software and operating systems updated</li>
+                <li>Be cautious of phishing attempts and suspicious emails</li>
+                <li>Use secure networks when accessing sensitive information</li>
+                <li>Regularly review your account activity for any unauthorized access</li>
+            </ul>
+
+            <h2>Best Practices</h2>
+            <p>Remember that security is a continuous effort. Stay informed about the latest threats and best practices. When in doubt, err on the side of caution and use stronger security measures.</p>
+
+            <a href="../website.html" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+

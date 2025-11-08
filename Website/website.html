@@ -25,7 +25,7 @@
     <div class="flip-cards-section">
         <h2 class="flip-cards-title">Discover More</h2>
         <div class="flip-cards-container">
-            <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card" onclick="window.location.href='flip-cards/security-page.html'">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="../Pictures/security.jpg" alt="Security">
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card" onclick="window.location.href='flip-cards/privacy-page.html'">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="../Pictures/map.jpg" alt="Privacy">
@@ -51,7 +51,7 @@
                 </div>
             </div>
 
-            <div class="flip-card" onclick="flipCard(this)">
+            <div class="flip-card" onclick="window.location.href='flip-cards/protection-page.html'">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="../Pictures/hacker.jpg" alt="Protection">
@@ -67,10 +67,16 @@
     </div>
 
     <script>
-        // Flip card function
-        function flipCard(card) {
-            card.classList.toggle('flipped');
-        }
+        // Auto-flip on hover for visual effect
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.classList.add('flipped');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.classList.remove('flipped');
+            });
+        });
     </script>
 </body>
 </html>

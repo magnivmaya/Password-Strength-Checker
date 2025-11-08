@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Tips - SafeSniffer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, rgb(0, 51, 255) 0%, rgb(255, 128, 0) 100%);
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header img {
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            line-height: 1.8;
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .content h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        .content ul {
+            margin-left: 30px;
+            margin-top: 15px;
+        }
+
+        .content li {
+            margin-bottom: 10px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, rgb(0, 51, 255) 0%, rgb(255, 128, 0) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Security Tips</h1>
+            <img src="../../Pictures/security.jpg" alt="Security">
+        </div>
+        <div class="content">
+            <h2>Protect Your Digital Life</h2>
+            <p>In today's digital world, security is more important than ever. Here are essential tips to keep your accounts and personal information safe:</p>
+            
+            <h2>Password Best Practices</h2>
+            <ul>
+                <li><strong>Use unique passwords</strong> for each account - Never reuse passwords across different platforms</li>
+                <li><strong>Create strong passwords</strong> - Use a mix of uppercase, lowercase, numbers, and special characters</li>
+                <li><strong>Make them long</strong> - Aim for at least 12-16 characters for better security</li>
+                <li><strong>Avoid personal information</strong> - Don't use names, birthdays, or easily guessable information</li>
+            </ul>
+
+            <h2>Two-Factor Authentication (2FA)</h2>
+            <p>Enable two-factor authentication whenever possible. This adds an extra layer of security by requiring a second form of verification in addition to your password.</p>
+
+            <h2>Regular Updates</h2>
+            <ul>
+                <li>Regularly update your passwords, especially for sensitive accounts</li>
+                <li>Keep your software and devices updated with the latest security patches</li>
+                <li>Use a password manager to securely store and manage your passwords</li>
+            </ul>
+
+            <a href="../website.html" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
+
