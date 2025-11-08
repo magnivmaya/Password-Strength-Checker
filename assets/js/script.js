@@ -58,7 +58,7 @@ function calculatePasswordStrength(password) {
     if (checks.number) score += 20;
     if (checks.special) score += 20;
     
-    // Bonus points for length
+    
     if (password.length >= 12) score += 10;
     if (password.length >= 16) score += 10;
     if (password.length >= 20) score += 10;
@@ -73,13 +73,13 @@ function calculatePasswordStrength(password) {
         score -= 15;
     }
     
-    // Bonus for variety
+    
     const uniqueChars = new Set(password).size;
     if (uniqueChars >= password.length * 0.8) {
         score += 10;
     }
     
-    // Ensure score is between 0 and 100
+    
     score = Math.max(0, Math.min(100, score));
     
     return {
@@ -150,7 +150,7 @@ function updateCrackTime(password, strength) {
     const possibleChars = calculatePossibleChars(strength.checks);
     const combinations = Math.pow(possibleChars, password.length);
     
-    // Assume 1 billion guesses per second (modern GPU)
+    // Assume 1 billion guesses per second
     const guessesPerSecond = 1e9;
     const secondsToCrack = combinations / (2 * guessesPerSecond); // Divide by 2 for average case
     
