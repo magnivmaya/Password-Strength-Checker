@@ -2,7 +2,7 @@
 
 This guide shows you how to run your Password Strength Checker on your local network so other devices can access it.
 
-## Quick Start
+## Quick Start 
 
 ### Option 1: Using Visual Studio (Recommended)
 
