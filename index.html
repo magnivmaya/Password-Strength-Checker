@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🔐 Password Strength Checker</h1>
+            <p class="subtitle">Test your password strength!</p>
+            <div class="home">
+                <button type="button" onclick="window.location.href='Website/website.html'">Home</button>
+            </div>
+            
+            <div class="input-container">
+                <input 
+                    type="password" 
+                    id="passwordInput" 
+                    placeholder="Enter your password"
+                    autocomplete="off"
+                >
+                <button class="toggle-password" id="togglePassword">
+                    <span class="eye-icon">👁️</span>
+                </button>
+            </div>
+            <div class="char-count" id="charCount">0 characters</div>
+            
+            <div class="strength-meter">
+                <div class="strength-meter-fill" id="strengthMeterFill"></div>
+            </div>
+            
+            <div class="strength-text" id="strengthText">
+                Enter a password to check its strength
+            </div>
+            
+            <div class="requirements" id="requirements">
+                <h3>Password Requirements:</h3>
+                <ul>
+                    <li id="req-length">
+                        <span class="icon">○</span>
+                        <span>At least 8 characters</span>
+                    </li>
+                    <li id="req-uppercase">
+                        <span class="icon">○</span>
+                        <span>Contains uppercase letter</span>
+                    </li>
+                    <li id="req-lowercase">
+                        <span class="icon">○</span>
+                        <span>Contains lowercase letter</span>
+                    </li>
+                    <li id="req-number">
+                        <span class="icon">○</span>
+                        <span>Contains number</span>
+                    </li>
+                    <li id="req-special">
+                        <span class="icon">○</span>
+                        <span>Contains special character</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="info-section">
+                <h3>💡 Tips for Strong Passwords:</h3>
+                <ul>
+                    <li>Use a mix of letters, numbers, and symbols</li>
+                    <li>Make it at least 12 characters long</li>
+                    <li>Avoid common words and patterns</li>
+                    <li>Don't use personal information</li>
+                    <li>Use a unique password for each account</li>
+                </ul>
+            </div>
+            
+            <div class="crack-time" id="crackTime"></div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

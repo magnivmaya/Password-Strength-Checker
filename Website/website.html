@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSniffer - Password Security</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">SafeSniffer</h1>
+            <p class="header-subtitle">Your Password Security Companion</p>
+        </header>
+
+        <div class="button-container">
+            <button class="pass" type="button" onclick="window.location.href='../index.html'">
+                <span class="button-text">Go to Password Strength Checker</span>
+                <span class="button-arrow">→</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Flip Cards Section -->
+    <div class="flip-cards-section">
+        <h2 class="flip-cards-title">Discover More</h2>
+        <div class="flip-cards-container">
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../Pictures/security.jpg" alt="Security">
+                        <h3>Security</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Security Tips</h3>
+                        <p>Protect your digital life with strong passwords. Use unique passwords for each account and enable two-factor authentication whenever possible.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../Pictures/map.jpg" alt="Privacy">
+                        <h3>Privacy</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Privacy Matters</h3>
+                        <p>Your personal information is valuable. Keep it safe by using complex passwords and being cautious about what you share online.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card" onclick="flipCard(this)">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../Pictures/hacker.jpg" alt="Protection">
+                        <h3>Protection</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <h3>Stay Protected</h3>
+                        <p>Regularly update your passwords and use a password manager to keep track of them securely. Never reuse passwords across different accounts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Flip card function
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+    </script>
+</body>
+</html>

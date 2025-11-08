@@ -1,0 +1,22 @@
+# VS Code
+.vscode/
+
+# Dependencies
+venv/
+
+# Build artifacts
+build/
+dist/
+*.o
+*.exe
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*~
+
+# Sensitive files (example - adjust as needed)
+config.json
+.env

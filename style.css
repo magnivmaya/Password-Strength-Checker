@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.char-count{
+    color:white;
+}
+
+.home {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.home button {
+    color: #333;
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-shadow: 0 0.062em 0 #ffffff;
+    box-shadow:
+        inset 0 0.0625em 0 0 #f4f4f4,
+        0 0.125em 0 0 #efefef,
+        0 0.25em 0 0 #e0e0e0,
+        0 0.3125em 0 0 #dedede,
+        0 0.375em 0 0 #dcdcdc,
+        0 0.425em 0 0 #cacaca,
+        0 0.425em 0.15em 0 #cecece;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.home button:active {
+    transform: translateY(0.2em);
+    box-shadow:
+        inset 0 0.03em 0 0 #f4f4f4,
+        0 0.03em 0 0 #efefef,
+        0 0.0625em 0 0 #ececec,
+        0 0.125em 0 0 #e0e0e0,
+        0 0.125em 0 0 #dedede,
+        0 0.2em 0 0 #dcdcdc,
+        0 0.225em 0 0 #cacaca,
+        0 0.225em 0.375em 0 #cecece;
+}
+
+.home button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(-45deg, rgb(0, 51, 255), rgb(255, 128, 0), rgb(0, 51, 255), rgb(255, 128, 0));
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(0, 51, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 128, 0, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(0, 51, 255, 0.2) 0%, transparent 50%);
+    animation: pulse 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card {
+    
+    backdrop-filter:blur(18px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(207, 198, 198, 0.3);
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+#passwordInput {
+    width: 100%;
+    padding: 20px 60px 20px 20px;
+    font-size: 1.4rem;
+    border: 3px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-weight: 500;
+}
+
+#passwordInput:focus {
+    border-color: #7777DF;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    padding: 8px 12px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.toggle-password:hover {
+    opacity: 1;
+}
+
+.strength-meter {
+    width: 100%;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.strength-meter-fill {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.strength-text {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    min-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.requirements {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.requirements h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.requirements ul {
+    list-style: none;
+}
+
+.requirements li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.requirements li .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.requirements li.met {
+    color: #10b981;
+}
+
+.requirements li.met .icon::before {
+    content: '✓';
+    font-weight: bold;
+}
+
+.info-section {
+    background: #fff9e6;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #fbbf24;
+    margin-bottom: 20px;
+}
+
+.info-section h3 {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section li {
+    color: #666;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info-section li::before {
+    content: '•';
+    position: absolute;
+    left: 5px;
+    color: #fbbf24;
+    font-weight: bold;
+}
+
+.crack-time {
+    text-align: center;
+    padding: 15px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.strength-very-weak {
+    background: #870903;
+}
+
+.strength-weak {
+    background: #E90C00;
+}
+
+.strength-medium {
+    background: #F9DD9C;
+}
+
+.strength-strong {
+    background: #418B24;
+}
+
+.strength-very-strong {
+    background: #1A4734;
+}
+
+
+
+
+
+.text-very-weak {
+    color: #870903;
+}
+
+.text-weak {
+    color: #E90C00;
+}
+
+.text-medium {
+    color: #F9DD9C;
+}
+
+.text-strong {
+    color:#418B24;
+}
+
+.text-very-strong {
+    color: #1A4734;
+}
+
+@media (max-width: 600px) {
+    .card {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+}
+
