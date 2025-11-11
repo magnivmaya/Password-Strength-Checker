@@ -1,5 +1,5 @@
 # Password-Strength-Checker
-
+https://magnivmaya.github.io/Password-Strength-Checker/
 ## Introduction  
 **Password-Strength-Checker** is a utility tool designed to tell a user how strong a given password is, based on length, character variety (uppercase/lowercase, digits, symbols). It helps users and developers quickly see whether or not a password is strong and secured, and provides information for improvement.
 
