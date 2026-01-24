@@ -5,18 +5,9 @@ https://magnivmaya.github.io/Password-Strength-Checker/
 
 ## Table of Contents  
 1. [Introduction](#introduction)  
-2. [installation](#installation)  
-3. [Features](#features)  
-4. [License](#license) 
+2. [Features](#features)  
+3. [License](#license) 
 
-
-## Installation  
-Clone the repository and install any required dependencies:
-
-```bash
-git clone https://github.com/magnivmaya/Password-Strength-Checker.git
-cd Password-Strength-Checker
-# If there is a build step, install needed dependencies.
 
 ---------------------------------------------------------------------------
 ## Features
