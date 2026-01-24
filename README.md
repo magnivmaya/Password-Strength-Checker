@@ -17,8 +17,3 @@ https://magnivmaya.github.io/Password-Strength-Checker/
 - How to make your password stronger
 - Explain how hackers think
 - etc...
-
----------------------------------------------------------------------------
-
-### License
-© 2025 magnivmaya
