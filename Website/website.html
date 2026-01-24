@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeSniffer - Password Security</title>
     <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/cards.css">
 </head>
+
 <body>
     <div class="container">
         <header class="header">
@@ -28,12 +31,12 @@
             <div class="flip-card" onclick="window.location.href='flip-cards/security-page.html'">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../assets/images/security.jpg" alt="Security">
                         <h3>Security</h3>
                     </div>
                     <div class="flip-card-back">
                         <h3>Security Tips</h3>
-                        <p>Protect your digital life with strong passwords. Use unique passwords for each account and enable two-factor authentication whenever possible.</p>
+                        <p>Protect your digital life with strong passwords. Use unique passwords for each account and
+                            enable two-factor authentication whenever possible.</p>
                     </div>
                 </div>
             </div>
@@ -41,12 +44,12 @@
             <div class="flip-card" onclick="window.location.href='flip-cards/privacy-page.html'">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../assets/images/map.jpg" alt="Privacy">
                         <h3>Privacy</h3>
                     </div>
                     <div class="flip-card-back">
                         <h3>Privacy Matters</h3>
-                        <p>Your personal information is valuable. Keep it safe by using complex passwords and being cautious about what you share online.</p>
+                        <p>Your personal information is valuable. Keep it safe by using complex passwords and being
+                            cautious about what you share online.</p>
                     </div>
                 </div>
             </div>
@@ -54,12 +57,12 @@
             <div class="flip-card" onclick="window.location.href='flip-cards/protection-page.html'">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="../assets/images/hacker.jpg" alt="Protection">
                         <h3>Protection</h3>
                     </div>
                     <div class="flip-card-back">
                         <h3>Stay Protected</h3>
-                        <p>Regularly update your passwords and use a password manager to keep track of them securely. Never reuse passwords across different accounts.</p>
+                        <p>Regularly update your passwords and use a password manager to keep track of them securely.
+                            Never reuse passwords across different accounts.</p>
                     </div>
                 </div>
             </div>
@@ -69,14 +72,15 @@
     <script>
         // Auto-flip on hover for visual effect
         document.querySelectorAll('.flip-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
+            card.addEventListener('mouseenter', function () {
                 this.classList.add('flipped');
             });
-            
-            card.addEventListener('mouseleave', function() {
+
+            card.addEventListener('mouseleave', function () {
                 this.classList.remove('flipped');
             });
         });
     </script>
 </body>
+
 </html>
